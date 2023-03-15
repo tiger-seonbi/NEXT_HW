@@ -1,12 +1,10 @@
 body {
     margin: 0;
     border: 0;
-    height: 844px;
 }
 html {
     margin: 0;
     border: 0;
-    height: 844px;
 }
 header {
     height: 84px;
@@ -21,14 +19,25 @@ a {
 article {
     height: auto;
 }
+footer {
+    height: 48px;
+    border-top: 1px solid grey;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
 .MainContainer {
     padding: 0;
     width: 100%;
-    height: 844px;
     background-color: black;
 }
 .MainContainer2 {
     border-top: 0.5px solid gray;
+    padding: 44px 0;
 }
 .HeadContainer {
     display: flex;
@@ -40,6 +49,11 @@ article {
     padding: 0 16px;
     /* z-index: 5;
     position: fixed; */
+    position: fixed;
+    /* background: yellow; */
+    background: black;
+    z-index: 999;
+    border-bottom: 1px solid gray;
 }
 .PersonPlusContainer {
     width: 24px;
@@ -96,6 +110,7 @@ article {
     position: relative;
     width: 100%;
     height: 84px;
+    margin-left: 24px;
 }
 .image1 {
     width: 90px;
@@ -111,7 +126,6 @@ article {
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    left:25px;
 }
 .bottombox {
     height: 30px;
@@ -121,7 +135,6 @@ article {
     width: 225px;
     vertical-align: middle;
     position: relative;
-    left:25px;
 }
 .bottombox-word {
     color: black;
@@ -309,4 +322,41 @@ article {
 }
 .empty-feed {
     width: 100%;
+}
+.homeicon {
+    color: white;
+}
+.compassicon {
+    color: white;
+}
+.movieicon {
+    color: white;
+}
+.addboxicon {
+    color: white;
+}
+.planeicon {
+    color: white;
+}
+.picicon {
+    width: 36px;
+    height: 28px;
+}
+.planebox {
+    position: relative;
+}
+.redcircle {
+    background-color: red;
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    width: 13px;
+    height: 13px;
+    border: 1px solid red;
+    border-radius: 50%;
+    color: white;
+    font-size: 6px;
+    justify-content: center;
+    align-items: center;
 }

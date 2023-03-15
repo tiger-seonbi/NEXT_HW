@@ -349,10 +349,10 @@ footer {
     background-color: red;
     position: absolute;
     display: flex;
-    top: 0;
-    right: 0;
-    width: 13px;
-    height: 13px;
+    top: -3px;
+    right: -5px;
+    width: 16px;
+    height: 15px;
     border: 1px solid red;
     border-radius: 50%;
     color: white;

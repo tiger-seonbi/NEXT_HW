@@ -1,0 +1,312 @@
+body {
+    margin: 0;
+    border: 0;
+    height: 844px;
+}
+html {
+    margin: 0;
+    border: 0;
+    height: 844px;
+}
+header {
+    height: 84px;
+    margin: 16px 16px 24px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a {
+    color: #E0F1FF;
+}
+article {
+    height: auto;
+}
+.MainContainer {
+    padding: 0;
+    width: 100%;
+    height: 844px;
+    background-color: black;
+}
+.MainContainer2 {
+    border-top: 0.5px solid gray;
+}
+.HeadContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    height: 44px;
+    padding: 0 16px;
+    /* z-index: 5;
+    position: fixed; */
+}
+.PersonPlusContainer {
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+}
+.GearContainer {
+    width: 32px;
+    height: 24px;
+    padding: 8px;
+}
+.NameContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.name-small {
+    color: white;
+    font-weight: 900;
+    width: 112px;
+    height: 24px;
+    margin-right: -5px;
+    position: relative;
+    top: 5px;
+}
+.head-gear {
+    color: white;
+    width: 24px;
+    height: 24px;
+}
+.person-plus {
+    color: white;
+    width: 24px;
+    height: 24px;
+}
+.name-icon {
+    width: 32px;
+    height: 32px;
+    margin-left: -4px;
+}
+.name-down {
+    color: white;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 4px;
+}
+.image1box {
+    width: 90px;
+    height: 90px;
+}
+.headerbox {
+    position: relative;
+    width: 100%;
+    height: 84px;
+}
+.image1 {
+    width: 90px;
+    height: 90px;
+}
+.name-big {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+.topbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    left:25px;
+}
+.bottombox {
+    height: 30px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    width: 225px;
+    vertical-align: middle;
+    position: relative;
+    left:25px;
+}
+.bottombox-word {
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    vertical-align: middle;
+    position: relative;
+    top: 7.5px;
+    left: 79px;
+}
+.profile {
+    height: 90px;
+    margin: 0 18px 21px;
+}
+.kor-name {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.profile-contents {
+    color: white;
+    font-size: 15px;
+    font-weight: light;
+    margin-top: 0;
+}
+.highlightbox {
+    height: 88px;
+    margin: 0 8px 21px;
+    display: flex;
+}
+.image2 {
+    width: 70px;
+    height: 70px;
+}
+.image3 {
+    width: 70px;
+    height: 70px;
+}
+.image4 {
+    width: 63px;
+    height: 63px;
+}
+.image5 {
+    width: 63px;
+    height: 63px;
+}
+.story1img {
+    width: 70px;
+    height: 70px;
+}
+.story1word {
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
+}
+.story2img {
+    width: 70px;
+    height: 70px;
+    margin-top: 1px;
+    margin-bottom: -1px;
+}
+.story2word {
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
+}
+.story3img {
+    width: 70px;
+    height: 70px;
+    margin-top: 3px;
+    margin-bottom: -2px;
+    margin-left: 3px;
+}
+.story3word {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
+}
+.story4img {
+    width: 70px;
+    height: 70px;
+    margin-top: 3px;
+}
+.story4word {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
+}
+.middlebox {
+    height: 36px;
+    padding: 12px 0;
+    border-top: 0.5px solid;
+    border-color: gray;
+    display: flex;
+    align-items: center;
+}
+.feedbox {
+    width: 33.3%;
+    height: 100%;
+}
+.followerbox {
+    width: 33.3%;
+    height: 100%;
+}
+.followbox {
+    width: 33.3%;
+    height: 100%;
+}
+.top-block {
+    color: gray;
+    text-align: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+}
+.bottom-block {
+    color: white;
+    text-align: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 14px;
+}
+.feed-headbox {
+    height: 44.5px;
+    border-top: 0.5px solid gray;
+    display: flex;
+}
+.feed-headcontent1 {
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 0.5px solid white;
+}
+.feed-headcontent2 {
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.feed-headcontent3 {
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.grid-icon {
+    color: #1877F2;
+}
+.mark-icon {
+    color: gray;
+}
+.photo-icon {
+    color: gray;
+}
+.top-photo-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.feed1 {
+    width: 100%;
+    margin-right: 3px;
+}
+.feed2 {
+    width: 100%;
+    margin-right: 3px;
+}
+.feed3 {
+    width: 100%;
+}
+.down-photo-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;   
+}
+.feed4 {
+    width: 100%;
+    margin-right: 3px;
+}
+.feed5 {
+    width: 100%;
+}
+.empty-feed {
+    width: 100%;
+}

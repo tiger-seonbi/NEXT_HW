@@ -1,0 +1,383 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    border: 0;
+}
+body {
+    margin: 0;
+    border: 0;
+}
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 12px;
+}
+footer {
+    width: 100%;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid white;
+    z-index: 999;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.middlecontainer {
+    padding-bottom: 58px;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+.maincontainer {
+    background-color: rgb(242, 243, 245);
+}
+.logobox {
+    width: 70%;
+}
+.tosslogo {
+    width: 92px;
+    height: 32px;
+    padding-left: 20px;
+}
+.happyicon {
+    width: 27px;
+    height: 32px;
+}
+.bellicon {
+    width: 40px;
+    height: 37px;
+    padding-bottom: 8px;
+    padding-right: 14px;
+}
+.container-tossbank {
+    width: 85.3%;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.tossbank-top {
+    padding-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tossbankword {
+    width: 280px;
+    color: black;
+    font-weight: 700;
+    padding-left: 15px;
+    font-size: 15px;
+}
+.tossbankicon {
+    padding-right: 15px;
+}
+.material-icons.arrow-right {
+    color: rgb(176, 183, 193);
+    font-size: 15px;
+}
+.tossbank-bottom {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.calenderimgbox {
+    width: 20%;
+}
+.calenderimg {
+    width: 34px;
+    height: 32px;
+    /* margin-bottom: 10px; */
+    margin-top: 25px;
+    margin-left: 15px;
+}
+.tossbank-wordbox {
+    width: 80%;
+}
+.topwordbox {
+    font-size: 10px;
+    color: gray;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+.bottomwordbox {
+    font-size: 13px;
+    font-weight: 500;
+}
+.container-asset {
+    width: 85.3%;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.asset-top {
+    padding-top: 5%;
+    width: 100%;
+}
+.assetword {
+    width: 280px;
+    color: black;
+    font-weight: 700;
+    padding-left: 15px;
+    font-size: 15px;
+}
+.contentsbox1 {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+.mainassetimg {
+    margin-top: 7px;
+    width: 43px;
+    height: 43px;
+}
+.contentwordboxtop {
+    font-size: 11px;
+    color: rgb(100,110,120);
+}
+.contentwordbox {
+    width: 65%;
+    padding-left: 10px;
+}
+.contentwordboxbottom {
+    font-size: 15px;
+    font-weight: 600;
+}
+.contentsendbox {
+    width: 40px;
+    color: rgb(80, 90, 100);
+    font-size: 13px;
+    font-weight: 500;
+    background-color: rgb(244, 243, 243);
+    height: 20px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: 1px solid rgb(244, 243, 243);
+    border-radius: 15%;
+    line-height: 6px;
+}
+.contentsbox2 {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+.hanaassetimg {
+    width: 36px;
+    height: 33px;
+    margin-left: 7px;
+}
+.contentsbox3 {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+.kakaoassetimg {
+    margin-left: 4px;
+    width: 38px;
+    height: 45px;
+}
+.container-spend {
+    width: 85.3%;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.spend-top {
+    padding-top: 5%;
+    width: 100%;
+}
+.spendword {
+    width: 280px;
+    color: black;
+    font-weight: 700;
+    padding-left: 15px;
+    font-size: 15px;
+}
+.spendbox {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+.spendimg {
+    width: 36px;
+    height: 33px;
+    margin-left: 3px;
+}
+.container-group {
+    width: 85.3%;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.group-top {
+    padding-top: 5%;
+    width: 100%;
+}
+.groupword {
+    width: 280px;
+    color: black;
+    font-weight: 700;
+    padding-left: 15px;
+    font-size: 15px;
+}
+.groupbox {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+.groupimg {
+    width: 40px;
+    height: 33px;
+    margin-left: 3px;
+}
+.movingbox {
+    width: 45%;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.comment1 {
+    font-size: 13px;
+    color: rgb(100,110,120);
+    padding-top: 10%;
+    padding-left: 15px;
+}
+.comment2{
+    color: black;
+    font-weight: 700;
+    padding-left: 15px;
+    padding-top: 14px;
+    font-size: 14px;
+}
+.boltimg {
+    position: relative;
+    left: 80px;
+    width: 24px;
+    height: 26px;
+}
+.container-movingbox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.minicontainer {
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.houseimg {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    left: 80px;
+}
+.movingbox3 {
+    width: 20%;
+    height: 107px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-bottom: 53px;
+    box-sizing: border-box;
+}
+.container-buttons {
+    padding-top: 7.5%;
+}
+.button-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+}
+.button1 {
+    width: 40%;
+    background-color: rgb(231,230,230);
+    border: 1px solid rgb(231,230,230);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 2px;
+    padding-bottom: 1px;
+}
+.button2 {
+    width: 40%;
+    background-color: rgb(231,230,230);
+    border: 1px solid rgb(231,230,230);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 2px;
+    padding-bottom: 1px;
+}
+.optionword {
+    font-size: 15px;
+    font-weight: 400;
+    padding-right: 10px;
+}
+.optionicon {
+    padding-top: 5px;
+}
+.plusicon {
+    padding-top: 5px;
+}
+.plusword {
+    font-size: 15px;
+    font-weight: 400;
+    padding-right: 10px;
+}
+.container-private {
+    padding: 20px 30%;
+}
+.private {
+    margin: 0 auto;
+    font-size: smaller;
+    font-weight: 500;
+}
+.moneyimg {
+    width: 24px;
+    height: 22px;
+}
+.iconword {
+    font-size: 10px;
+    font-weight: 200;
+    padding-left: 3px;
+}
+.homeword {
+    padding-left: 7px;
+}

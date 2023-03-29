@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'info.css' %}"/>
+</head>
+<body>
+    <!-- 상단 메뉴바 -->
+    <header>
+        <div class="head-container">
+            <div class="logo">
+                Bacteria's PORTFOLIO
+            </div>
+            <div class="link-container">
+                <div class="info links"><a href="">INFO!</a></div>
+                <div class="project links"><a href="">PROJECT!</a></div>
+                <div class="blog links"><a href="">BLOG!</a></div>
+            </div>
+        </div>
+    </header>
+    <!-- 메인 컨테이너 -->
+    <div class="main-container">
+        <div class="home">
+            <div class="homecontent">
+                <div class="content-box">GitHub.</div>
+                <div class="content-box">LinkdIn.</div>
+                <div class="content-box">Instagram.</div>
+                <div class="content-box">Youtube.</div>
+                <div class="content-box">Notion.</div>
+                <div class="content-box">Slack.</div>
+            </div>
+            <div class="homeimg">
+                <h2 class="title"><strong>N</strong>ever Stop For The NE<strong>X</strong>T.
+                </h2>
+                <h3 class="self">낭만 탐험가 유명균입니다!</h3>
+            </div>
+        </div>
+        <div class="intro">
+            <div class="tmi-title"><u>My TMI</u></div>            
+            <div class="intro-contentbox">
+                <div class="imgbox">
+                    <img src="{% static 'tmi-img.JPG' %}" class="tmi-img">
+                </div>
+                <div class="wordingbox">
+                    <p>저는 25살 유명균입니다.</p>
+                    <p>만화보는걸 좋아하구, 농구가 취미에요!</p>
+                    <p>재밌는 분위기를 즐기며, 낭만을 사랑합니다!</p>
+                    <p>저는 우주에 가보는 것이 꿈입니다!!!</p>
+                    <p>Let's go!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

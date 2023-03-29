@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'NeoDunggeunmoPro-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Dovemayo_wild';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/Dovemayo_wild.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin: 0;
+}
+h2 {
+    font-size: 80px;
+    color: white;
+    font-weight: 700;
+    box-sizing: border-box;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'NeoDunggeunmoPro-Regular';
+}
+strong {
+    color: rgb(223, 152, 62);
+}
+header {
+    width: 100%;
+    background-color: rgb(32, 33, 35);
+    position: fixed;
+    top: 0;
+    height: 60px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.logo {
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+    box-sizing: border-box;
+    padding-left: 20px;
+    margin-top: 5px;
+    font-family: 'NeoDunggeunmoPro-Regular';
+}
+.link-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 40%;
+}
+.links {
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+    box-sizing: border-box;
+    padding-left: 20px;
+    margin-top: 5px;
+    font-family: 'NeoDunggeunmoPro-Regular';
+}
+.self {
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+    box-sizing: border-box;
+    padding-left: 20px;
+    margin-top: 5px;
+    font-family: 'Dovemayo_wild';
+}
+.head-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+.main-container {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding-top: 55px;
+}
+.home {
+    display: flex;
+    justify-content: flex-start;
+}
+.homecontent {
+    width: 20%;
+    background-color: rgb(32, 33, 35);
+    border-right: 10px solid rgb(55, 65, 75);
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.content-box {
+    color: rgb(55, 65, 75);
+    font-size: 55px;
+    font-weight: 700;
+    padding-top: 40px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.homeimg {
+    width: 80%;
+    height: 110vh;
+    background-size: cover;
+    background-image: url(homeimg.png);
+}
+.tmi-title {
+    width: 52%;
+    font-size: 40px;
+    margin: 0;
+    color: black;
+    font-weight: 700;
+    box-sizing: border-box;
+    padding-top: 60px;
+    position: relative;
+    left: 48%;
+    font-family: 'NeoDunggeunmoPro-Regular';
+}
+.intro-contentbox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 100px;
+}
+.imgbox {
+    width: 375px;
+    height: 475px;
+    background-color: rgb(55, 65, 75);
+}
+.tmi-img {
+    width: 350px;
+    height: 450px;
+}
+.wordingbox {
+    font-size: 30px;
+    margin: 0;
+    color: black;
+    font-weight: 700;
+    font-family: 'Dovemayo_wild';
+}

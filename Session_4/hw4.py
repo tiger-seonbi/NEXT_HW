@@ -13,4 +13,5 @@ li_time_processed = [e.text for e in li_time]
 li_name = soup.select('div.name.time > strong')
 li_name_processed = [e.text for e in li_name]
 context = {"name":li_name_processed, "date":li_time_processed, "comment":li_comment_processed}
-pd.DataFrame(context)
+df_table = pd.DataFrame(context)
+print(df_table)

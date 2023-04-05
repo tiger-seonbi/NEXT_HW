@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New Post!</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}"/>
+    </head>
+    <body>
+        <h2>New Post</h2>
+        <form action="/new" method="POST">
+            {% csrf_token %}
+            <div>
+                <div>타이틀</div>
+                <div class="all_content"><input type="text" name="title" placeholder="Title"/></div>
+            </div>
+            <div class="big-content">
+                <div>카테고리</div>
+                <div class="all_content">
+                    <select name="category">
+                        {% for category in categories %}
+                        <option value="{{ category }}">{{ category }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="big-content">
+                <div>글 내용</div>
+                <div class="all_content">
+                    <textarea name="content" cols="100" rows="20" placeholder="Contents" class="all_content"></textarea>
+                </div>
+                </div>
+            <div class="all_content andcontent"><button type="submit">submit</button></div> 
+        </form>
+        <div class="hometag">
+            <a href="{% url 'home' %}">홈으로</a>
+        </div>
+    </body>
+</html>

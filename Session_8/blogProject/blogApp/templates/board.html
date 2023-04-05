@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'board.css' %}"/>
+    </head>
+    <body>
+        <h2>{{ cate.name }} 게시판</h2>
+        <div>
+            <div><h3>게시글 개수 : {{ filter_cat.count }}개</h3></div>
+            <div><h3>글 목록</h3></div>
+            <ul class="list">
+                {% for article in filter_cat %}
+                <li><a href="{% url 'detail' article.id %}"> {{ article.title }} </a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="hometagbox">
+            <a href="{% url 'home' %}" class="hometag">홈으로</a>
+        </div>
+    </body>
+</html>

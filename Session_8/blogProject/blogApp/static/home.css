@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'EF_jejudoldam';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ansungtangmyun-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/Ansungtangmyun-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin: 0;
+    background-color: rgb(5, 4, 4);
+}
+header {
+    border-bottom: 3px solid rgb(248, 215, 105);
+    font-family: 'EF_jejudoldam';
+    color: rgb(248, 215, 105);
+    background-color: rgb(5, 4, 4);
+}
+h2 {
+    padding-left: 43%;
+    margin-top: 0;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+.mainimg {
+    width: 250px;
+    height: 200px;
+}
+.imgbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(5, 4, 4);
+    color: rgb(161, 72, 128);
+    font-family: 'EF_jejudoldam';
+    font-weight: 400;
+    font-size: x-large;
+}
+b {
+    color: rgb(248, 215, 105);
+}
+a {
+    text-decoration: none;
+    color: rgb(148, 66, 240);
+}
+.cate_a {
+    border: 3px solid rgb(248, 215, 105);
+    border-radius: 10px;
+    padding: 2px;
+    font-size: larger;
+    font-family: 'EF_jejudoldam';
+    color: rgb(248, 215, 105);
+}
+nav {
+    background-color: rgb(5, 4, 4);
+    display: flex;
+    box-sizing: border-box;
+    padding: 50px 20%;
+    justify-content: space-between;
+    align-items: center;
+}
+h3 {
+    font-family: 'EF_jejudoldam';
+    color: rgb(248, 215, 105);
+    border-top: 3px dotted rgb(248, 215, 105);
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+.cate_h3 {
+    margin: 0;
+    border: 0;
+    padding-top: 20px;
+}
+li {
+    list-style: lower-roman;
+    font-family: 'EF_jejudoldam';
+    padding-top: 3px;
+}
+li::marker {
+    color: rgb(248, 215, 105);
+    font-family: 'EF_jejudoldam';  
+}
+.posting {
+    font-size: x-large;
+    color: rgb(248, 215, 105);
+}
+ul {
+    box-sizing: border-box;
+    padding-left: 10%;
+}

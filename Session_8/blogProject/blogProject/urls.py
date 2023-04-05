@@ -1,4 +1,4 @@
-"""portfolioProject URL Configuration
+"""blogProject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from portfolioapp import views
+from blogApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('info/', views.info, name='info'),
-    path('project/', views.project, name='project'),
+    path('new', views.new, name='new'),
+    path('home', views.home, name='home'),
+    path('detail/<int:article_id>/', views.detail, name='detail'),
+    path('board/<str:board_name>/',views.board, name="board"),
 ]

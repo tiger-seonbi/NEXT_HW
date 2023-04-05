@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}"/>
+    </head>
+    <body>
+        <div>
+            <h2>제목 : {{ article.title }}</h2>
+        </div>
+        <div>
+            카테고리 : <b>{{ article.category }}</b>
+        </div>
+        <div class="contents">내용 :</div>
+        <div class="contents cont">
+            {{ article.content }}
+        </div>
+        <div class="time">
+            생성 일시 : <b>{{ article.created_at }}</b>
+        </div>
+        <div class="hometag">
+            <a href="{% url 'home' %}">홈으로</a>
+        </div>
+    </body>
+    </html>

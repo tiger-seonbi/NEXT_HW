@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'EF_jejudoldam';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding-left: 20px;
+    background-color: rgb(5, 4, 4);
+    color: rgb(248, 215, 105);
+    font-family: 'EF_jejudoldam';
+}
+li {
+    list-style: lower-roman;
+    font-family: 'EF_jejudoldam';
+    padding-top: 3px;
+}
+li::marker {
+    color: rgb(248, 215, 105);
+    font-family: 'EF_jejudoldam';  
+}
+h3 {
+    padding-top: 10px;
+    border-top: 3px dotted rgb(248, 215, 105);
+}
+a {
+    text-decoration: none;
+    color: rgb(148, 66, 240);
+}
+.hometag {
+    color: rgb(248, 215, 105);
+    font-size: larger;
+}
+.hometagbox {
+    padding-top: 10px;
+}

@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+body {
+    margin: 0;
+}
+header {
+    font-size: 45px;
+    font-family: 'GmarketSansMedium';
+    font-weight: 700;
+    box-sizing: border-box;
+    padding-left: 40%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(242, 242, 242);
+    border-bottom: 1px solid rgb(242, 242, 242) ;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color: black;
+}
+a:visited {
+    color: black;
+}
+.top-block {
+    font-family: 'GmarketSansMedium';
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.deco-words {
+    font-family: 'BookkMyungjo-Bd';
+    box-sizing: border-box;
+    padding-right: 300px;
+    padding-left: 300px;
+    padding-top: 6px;
+}
+.make_task {
+    font-weight: 700;
+    box-sizing: border-box;
+    padding: 6px;
+    border: 1px solid #A6B8C4;
+    background-color: #A6B8C4;
+    border-radius: 10px;
+}
+.my_tasks {
+    box-sizing: border-box;
+    font-family: 'GmarketSansMedium';
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 43%;
+    background-color: #6B6B84;
+    color: #C6D6F7;
+}
+.task_box {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    margin-top: 10px;
+    background-color:#E9EDF1;
+}
+.button-box {
+    display: flex;
+}
+.mt_dt {
+    box-sizing: border-box;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+    font-size: 20px;
+}
+.tb_dt {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    margin-top: 10px;
+    background-color:#E9EDF1;
+}

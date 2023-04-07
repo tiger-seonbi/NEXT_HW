@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'newup.css' %}"/>
+    </head>
+    <body>
+        <header>To Do List!</header>
+        <div class="top-container">
+            <div class="top-block">
+                <div class="deco-words">"오늘 걷지 않는다면, 내일은 뛰어야하니까."</div>
+            </div>
+        <div class="postit">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="title_box">
+                    <input type="text" placeholder="할 일" name="title" >
+                </div>
+                <div class="detail_box">
+                    <textarea cols="30" rows="5" name="detail"  placeholder="상세 내용"></textarea>
+                </div>
+                <div class="duedate_box">
+                    <input type="date" name="due_date" >
+                </div>
+                <div class="doornot_box">
+                    <select name="doornot" >
+                        {% for doornot in doornot_list %}
+                        <option>{{ doornot.state }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button type="submit">등록하기</button>
+            </form>
+        </div>
+        <div class="tb_dt">
+            <a href="{% url 'home' %}">홈으로</a>
+        </div>
+    </body>
+</html>

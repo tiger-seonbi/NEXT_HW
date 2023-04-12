@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Article, Category
+from .models import Article, Category, Comment, Reply
 # Create your views here.
 def new(request):
     if request.method == 'POST':
@@ -30,7 +30,46 @@ def home(request):
 def detail(request, article_id):
     article = Article.objects.get(id=article_id)
 
+    if request.method == 'POST':
+
+
+        Comment.objects.create(
+            content = request.POST['content'],
+            article = article
+        )
+
+        return redirect('detail', article_id)
+
     return render(request, 'detail.html', {'article':article})
+
+def comment_delete(request, comment_pk, article_id):
+    comment = Comment.objects.get(id=comment_pk)
+    comment.delete()
+
+    return redirect('detail', article_id)
+
+#논리구조 싹다 뜯고 + url 매핑도 다시해야함.
+def reply(request, comment_pk, article_id):
+
+    article = Article.objects.get(id=article_id)
+    # 여기서 코멘트 중에 아티클 해당 아티클 아이디 있는거 가져오는 방법, 리플 중에 해당 코멘트 중에 있는거 가져오는 방법 찾아야함.
+    comment = Comment.objects.filter(article = article)
+    this_comment = Comment.objects.get(pk = comment_pk)
+    replies = Reply.objects.filter(comment = this_comment)
+    if request.method == 'POST':
+        Reply.objects.create(
+            content = request.POST['content'],
+            comment = this_comment
+        )
+        return redirect('reply', article_id, comment_pk)
+    return render(request, 'reply.html', {'article':article, 'comment':comment, 'replies':replies})
+
+def reply_delete(request, comment_pk, article_id, reply_pk):
+    reply = Reply.objects.get(pk=reply_pk)
+    reply.delete()
+
+    return redirect('reply', article_id, comment_pk)
+
 
 def board(request, board_name):
     # category_name = request.GET.get('category')

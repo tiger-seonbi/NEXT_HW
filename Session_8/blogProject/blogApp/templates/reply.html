@@ -22,17 +22,23 @@
         <div class="time">
             생성 일시 : <b>{{ article.created_at }}</b>
         </div>
-        <form action="" method="POST">
-            {% csrf_token %}
-            <input type="text" name="content" placeholder="댓글을 입력해주세요."/>
-            <button type="submit">작성하기</button>
-        </form>
 
         {% for comment in article.comments.all %}
         <li>{{ comment.content }}
             <a href="{% url 'comment_delete' article.id comment.pk %}">삭제하기 /</a>
-            <a href="{% url 'reply' article.id comment.pk %}" >답글</a>
+            <a href="{% url 'detail' article.id %}">답글 닫기</a>
         </li>
+        <!--여기에 if 문 넣어서 답글 달린거에만 텍스트 넣는거 넣을 수 있을까?-->
+        <form action="" method="POST" class="reply_form">
+            {% csrf_token %}
+            <input type="text" name="content" placeholder="답글을 입력해주세요."/>
+            <button type="submit">작성하기</button>
+        </form>
+        {% for reply in comment.replys.all %}
+        <li class="reply">{{reply.content}}
+            <a href="{% url 'reply_delete' article.id comment.pk reply.pk %}">삭제하기</a>
+        </li>
+        {% endfor %}
         {% endfor %}
         <div class="hometag">
             <a href="{% url 'home' %}">홈으로</a>

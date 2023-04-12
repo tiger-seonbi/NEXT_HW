@@ -35,3 +35,14 @@ a {
 b {
     color: rgb(161, 72, 128);
 }
+.reply {
+    padding-left: 30px;
+    color: greenyellow;
+}
+li > a {
+    color: cornsilk;
+}
+.reply_form {
+    box-sizing: border-box;
+    padding-left: 25px;
+}

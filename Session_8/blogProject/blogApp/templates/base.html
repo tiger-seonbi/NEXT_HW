@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static  %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'base.css' %}" type="text/css"/>
+        {% block css %}
+
+        {% endblock css %}
+    </head>
+    <body>
+        <header>
+            {% block header %}
+            
+            {% endblock header %}
+        </header>
+        <div class="maincontainer">
+            {% block maincontainer %}
+            
+            {% endblock maincontainer %}
+        </div>
+        <footer>
+            <div class="info-container">
+                <div class="info1">
+                    <div><a><strong>서비스</strong></a></div>
+                    <div><a class="a_bot">공지사항</a></div>
+                    <div><a class="a_bot">자주 묻는 질문</a></div>
+                    <div><a class="a_bot">고객 센터</a></div>
+                    <div><a class="a_bot">브랜드 리소스 관리</a></div>
+                </div>
+                <div class="info2">
+                    <div><a><strong>블로그</strong></a></div>
+                    <div><a class="a_bot">블로그 소개</a></div>
+                    <div><a class="a_bot">공고</a></div>
+                    <div><a class="a_bot">instagram</a></div>
+                    <div><a class="a_bot">facebook</a></div>
+                </div>
+                <div class="info3">
+                    <div><a><strong>문의</strong></a></div>
+                    <div><a class="a_bot">사업 제휴</a></div>
+                    <div><a class="a_bot">광고 문의</a></div>
+                    <div><a class="a_bot">IR</a></div>
+                </div>
+            </div>
+            <div class="stock-container">
+                <div><strong>유명회사</strong></div>
+                <div>사업자 등록 번호 : 021-23204-3332</div>
+                <div>블로그 서비스: 블로그 서비스임</div>
+                <div>032-123 강남구 테헤란로22 32층</div>
+                <div>고객센터: 강남구 테헤란로 22 32층</div>
+            </div>
+        </footer>
+    </body>
+</html>

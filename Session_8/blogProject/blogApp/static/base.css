@@ -1,0 +1,43 @@
+footer {
+    width: 100%;
+    background-color: rgb(5, 4, 4);
+    color: ghostwhite;
+    border-top: 1px solid rgb(248, 215, 105);
+    margin-top: 50px;
+    padding-left: 30px;
+    font-size: small;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+strong {
+    color: white;
+    font-weight: 700;
+}
+
+.info-container {
+    padding-top: 30px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.info1 {
+    box-sizing: border-box;
+    padding-right: 20px;
+}
+.info2 {
+    box-sizing: border-box;
+    padding-right: 20px;
+}
+
+div > a {
+    color: lightgray;
+}
+.stock-container {
+    box-sizing: border-box;
+    padding-right: 20px;
+    padding-top: 30px;
+}

@@ -19,8 +19,11 @@ from blogApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('new', views.new, name='new'),
-    path('home', views.home, name='home'),
+    path('new/', views.new, name='new'),
+    path('home/', views.home, name='home'),
     path('detail/<int:article_id>/', views.detail, name='detail'),
+    path('detail/<int:article_id>,<int:comment_pk>/', views.comment_delete, name='comment_delete'),
+    path('detail/<int:article_id>,<int:comment_pk>/reply', views.reply, name='reply'),
+    path('detail/<int:article_id>,<int:comment_pk>/reply/<int:reply_pk>', views.reply_delete, name='reply_delete'),
     path('board/<str:board_name>/',views.board, name="board"),
 ]

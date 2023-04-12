@@ -1,39 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}"/>
-    </head>
-    <body>
-        <header>
-            <h2 class="main_title">띵균이의 블로그</h2>
-        </header>
-        <div><h3 class="cate_h3">카테고리</h3></div>
-        <nav>
-            {% for category in categories %}
-                <div><a href="{% url 'board' category.name %}" class="cate_a"> {{ category.name }}({{ category.article_set.count }}) </a></div>
-            {% endfor %}
-        </nav>
-        <div class="maincontainer">
-            <div class="imgbox">
-                <img class="mainimg" src="{% static 'mainimg2.png' %}">
-                <div class="text_box">
-                    <div>내가 상상한대로<b>'</b></div>
-                    <div>이뤄질 수 있도록<b>,</b></div>
-                    <div>조금씩 써보는 일기<b>.</b></div>
-                </div>
-            </div>
-            <div><h3>글 목록</h3></div>
-            <ul class="list">
-                {% for article in articles %}
-                <li><a href="{% url 'detail' article.id %}"> {{ article.title }} </a></li>
-                {% endfor %}
-            </ul>
+{% extends 'base.html' %}
+
+{% block css %}    
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}"/>
+{% endblock css %}
+
+{% block header %}
+<h2 class="main_title">띵균이의 블로그</h2>
+{% endblock header %}
+
+{% block maincontainer %}
+<div><h3 class="cate_h3">카테고리</h3></div>
+<nav>
+    {% for category in categories %}
+        <div><a href="{% url 'board' category.name %}" class="cate_a"> {{ category.name }}({{ category.article_set.count }}) </a></div>
+    {% endfor %}
+</nav>
+<div class="maincontainer">
+    <div class="imgbox">
+        <img class="mainimg" src="{% static 'mainimg2.png' %}">
+        <div class="text_box">
+            <div>내가 상상한대로<b>'</b></div>
+            <div>이뤄질 수 있도록<b>,</b></div>
+            <div>조금씩 써보는 일기<b>.</b></div>
         </div>
-        <h3><a href="{% url 'new' %}" class="posting">posting하기</a></h3>
-    </body>
-</html>
+    </div>
+    <div><h3>글 목록</h3></div>
+    <ul class="list">
+        {% for article in articles %}
+        <li><a href="{% url 'detail' article.id %}"> {{ article.title }} </a></li>
+        {% endfor %}
+    </ul>
+</div>
+<h3><a href="{% url 'new' %}" class="posting">posting하기</a></h3>
+{% endblock maincontainer %}

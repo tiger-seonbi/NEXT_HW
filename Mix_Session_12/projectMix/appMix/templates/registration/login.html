@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'login.css' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="main-container1">
+  <div class="middle_box">  
+      <form method="POST">
+          {% csrf_token %}
+          <div class="posts_box">
+            {% if error %}
+            <p>{{error}}</p>
+            {% endif %}
+            <input
+              type="text"
+              name="username"
+              placeholder="아이디"
+              class="registration-input"
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="비밀번호"
+              class="registration-input"
+            />
+          </div>
+          <div class="registration-box">
+            <button id="post-button">로그인</button>
+          </div>
+      </form>
+  </div>
+</div>
+{% endblock content %}

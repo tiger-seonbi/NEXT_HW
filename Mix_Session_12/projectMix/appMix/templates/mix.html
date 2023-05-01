@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+
+{% endblock css %}
+
+{% block content %}
+<div class="main-container1">
+    <div class="mixed_words-list">
+        <div>
+        <ul>
+            {% for mixed_word in items %}
+            <a href="{% url 'detail' mixed_word.pk %}"><li>{{ mixed_word }}</li></a>
+            {% endfor %}
+            
+        </ul>
+    </div>
+</div>
+{% endblock content %}

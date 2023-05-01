@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+
+{% endblock css %}
+
+{% block content %}
+<div class="main-container1">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="item_title_submit">
+            <input type="text" id="title" name="title" placeholder="{{ item.title }}">
+        </div>
+        <div class="item_word123">
+            {{ item.word1 }}
+            {{ item.word2 }}
+            {{ item.word3 }}
+        </div>
+        <div class="item_content_submit">
+            <textarea id="content" name="content" cols="30" rows="10">{{ item.content }}</textarea>
+        </div>
+        <div class="submit_button">
+            <button type="submit">수정하기</button>
+    </form>
+</div>
+{% endblock content %}

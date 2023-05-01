@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+.maincontainer {
+    background: url("./mix_background.png/");
+    background-size: cover;
+    height: 700px;
+}
+.main-container1 {
+    box-sizing: border-box;
+    margin-left: 27%;
+    padding-top: 10%;
+}
+input[type='text'] {
+    height: 30px;
+    width: 500px;
+}
+.word_button {
+    background-color: rgb(30, 30, 30);
+    border: none;
+    color: white;
+    padding-right: 28px;
+    padding-left: 28px;
+    padding-top: 7px;
+    padding-bottom: 9.5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'SUITE-Regular';
+}
+.mix_button {
+    box-sizing: border-box;
+    margin-left: 45%;
+    margin-top: 8%;
+    font-family: 'SUITE-Regular';
+    font-weight: 900;
+    font-size: 42px;
+    color: rgb(217, 217, 217);
+    background-color: black;
+}

@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+html {
+    margin:0;
+}
+body {
+    margin:0;
+}
+.header_box {
+    box-sizing: border-box;
+    background-color: rgb(30,30,30);
+    display: flex;
+    font-family: 'SUITE-Regular';
+    align-items: center;
+    justify-content: end;
+    height: 45px;
+    padding-right: 15px;
+    border: 2px solid white;
+}
+.kakao_login {
+    margin-left: 15px;
+}
+.google_login {
+    margin-left: 15px;
+}
+.menu_button a:link {
+    color: white;
+    text-decoration: none;
+}
+.menu_button a:visited {
+    color: white;
+    text-decoration: none;
+}
+.menu_button {
+    box-sizing: border-box;
+    padding-right: 15px;
+    color: white;
+}

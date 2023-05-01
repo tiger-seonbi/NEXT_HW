@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load account socialaccount %}
+        {% providers_media_js %}
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'base.css' %}">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        {% block css %}
+        {% endblock css %}
+    </head>
+    <body>
+        <header>
+            <div class="header_box">
+                <div class="home menu_button">
+                    <a href="{% url 'home' %}">Home</a>
+                </div>
+                <div class="dic menu_button">
+                    <a href="{% url 'mix' %}">Dictionary</a>
+                </div>
+                {% if not user.is_authenticated %}
+                <div class="signup menu_button">
+                    <a href="{% url 'signup' %}">Sign-up</a>
+                </div>
+                <div class="login menu_button">
+                    <a href="{% url 'login' %}">Log-in</a>
+                </div>
+                <div class="kakao_login">
+                    <form method = "POST" action="{% provider_login_url 'kakao' %}" >
+                    {% csrf_token %} {{ form.as_p }} {% if redirect_field_value %}
+                    <input
+                    type ="hidden"
+                    name="{{ redirect_field_name }}"
+                    value="{{ redirect_field_value }}"
+                    />
+                    {% endif %}
+                    <button class = "primaryAction" type="submit">Continue with kakao</button> </form>
+                </div>
+                <div class="google_login">
+                    <form method = "POST" action="{% provider_login_url 'google' %}" >
+                    {% csrf_token %} {{ form.as_p }} {% if redirect_field_value %}
+                    <input
+                    type ="hidden"
+                    name="{{ redirect_field_name }}"
+                    value="{{ redirect_field_value }}"
+                    />
+                    {% endif %}
+                    <button class = "primaryAction" type="submit">Continue with google</button> </form>
+                </div>
+                <!-- <a href="{% provider_login_url 'kakao' %}">카카오 로그인</a> -->
+                <!-- <a href="{% provider_login_url 'google' %}"> 구글 로그인 </a> -->
+                {% else %}
+                <div class="hello menu_button">
+                    <span>Mixing 준비 완료, {{user.username}}님.</span>
+                </div>
+                <div class="logout menu_button">
+                    <a href="{% url 'logout' %}">log-out</a>
+                </div>
+                {% endif %}
+            </div>
+        </header>
+        <div class="content">
+            {% block content %}
+        
+            {% endblock content %}
+        </div>
+    </body>
+</html>

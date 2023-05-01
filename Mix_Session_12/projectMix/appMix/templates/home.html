@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="maincontainer">
+    <div class="main-container1">
+        <div class="typing-box">
+            <form action="/home/" method="POST">
+                {% csrf_token %}
+                <input type="text" name="word" placeholder="type the words"/>
+                <button type="submit" class="word_button">save</button>            
+            </form>
+        </div>
+    </div>
+    {% comment %} <div class="main-container2">
+        <div class="words-list">
+            <ul>
+                {% for word in words %}
+                <li>{{ word }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div> {% endcomment %}
+    <div class="mix_link">
+        <form action="/mix/" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="mix_button">MIX!</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}
+

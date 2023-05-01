@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+
+{% endblock css %}
+
+{% block content %}
+<div class="main-container1">
+    <div class="item_title">
+        {{ item.title }}
+    </div>
+    <div class="item_word123">
+        {{ item.word1 }}
+        {{ item.word2 }}
+        {{ item.word3 }}
+    </div>
+    <div class="item_content">
+        {{ item.content }}
+    </div>
+    {% if user.is_authenticated and user.pk == item.author.pk %}
+    <div class="update_button">
+        <a href="{% url 'update' item.pk %}">수정하기</a>
+    </div>
+    <div class="delete_button">
+        <a href="{% url 'delete' item.pk %}">삭제하기</a>
+    </div>
+    {%endif%}
+    <div class="comment_typing_box">
+        <form action='', method="POST">
+            {% csrf_token %}
+            <input type="text" name="comment" placeholder="댓글을 입력해주세요"/>
+            <button type="submit">댓글 쓰기</button>
+        </form>
+    </div>
+    <div class="comments">
+        <ul>
+        {% for comment in item.comments.all %}
+            <li>{{ comment.comment }}</li>
+            {%if user.is_authenticated and user.pk == comment.author.pk%}
+            <a href="{% url 'comment_delete' item.id comment.id %}"><button>X</button></a>
+            {%endif%}
+            <a href="{% url 'recomment' item.id comment.id %}"><button>답글</button></a>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'ChosunCentennial';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ChosunCentennial.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+html {
+    margin:0;
+}
+body {
+    margin:0;
+}
+h1 {
+    font-family: 'ChosunCentennial';
+}
+.header_box {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 60px;
+    padding-right: 15px;
+    border: 2px solid black;
+    font-family: 'ChosunCentennial';
+}
+.blog_title {
+    padding-right: 23%;
+}
+.linkto > a:visited {
+    color:black;
+    text-decoration: none;
+}
+.linkto > a:link {
+    color:black;
+    text-decoration: none;
+}
+.linkto {
+    box-sizing: border-box;
+    padding-right: 25px;
+}
+.footer_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    font-size: small;
+}
+.left {
+    box-sizing: border-box;
+    padding-left: 20px;
+}

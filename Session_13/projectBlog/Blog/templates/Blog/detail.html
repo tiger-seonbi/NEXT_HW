@@ -1,0 +1,34 @@
+{% extends 'Blog/base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'Blog/detail.css' %}"/>
+{% endblock css %}
+{% block content %}
+<div class="main_content">
+    <div class="title">글의 제목. : {{ post.title }}</div>
+    <p><div class="content">글의 내용. : {{ post.content }}</div></p>
+    <div class="user">글쓴이. : {{ post.author }}</div>
+    <div class="edit_box">
+        {% if user.is_authenticated and user.pk == post.author.pk %}
+        <div class="update_link"><a href="{% url 'Blog:update' post.pk %}">수정하기</a></div>
+        <div class="delete_link"><a href="{% url 'Blog:delete' post.pk %}">삭제하기</a></div>
+    {% endif %}
+    </div>
+    <div class="comment_typing">
+        <p>댓-글</p>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="text" name="content" id="content" placeholder="댓글을 입력해주세요">
+            <button type="submit" class="button">댓글 쓰기</button>
+        </form>
+    </div>
+    <div class="comment_list">
+        <ul>
+        {% for comment in comments %}
+            <li><p>작성자: {{comment.author}}</p><p>{{comment.content}}</p></li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock content %}

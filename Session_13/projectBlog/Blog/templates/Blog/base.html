@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'Blog/base.css' %}" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        {% block css %}
+        {% endblock css %}
+    </head>
+    <body>
+        <header>
+            <div class="header_box">
+                <h1 class="blog_title">不路口(불로구)</h1>
+                <div class="home linkto">
+                    <a href="{% url 'Blog:home' %}">Home</a>
+                </div>
+                    {% if user.is_authenticated %}
+                <div class="logout linkto">
+                    <a href="{% url 'accounts:logout' %}">Log-out</a>
+                </div>
+                <div class="hello user">
+                    <span>안녕하세요. {{user.username}}</span>
+                </div>
+                    {% else %}
+                <div class="login linkto">
+                    <a href="{% url 'accounts:login' %}">Log-in</a>
+                </div>
+                <div class="signin linkto">
+                    <a href="{% url 'accounts:signup' %}">회원가입</a>
+                </div>
+                    {% endif %}
+            </div>
+        </header>
+        <div class="body_contents">
+            {% block content %}
+
+            {% endblock content %}
+        </div>
+        <footer>
+            <div class="footer_box">
+                <div class="left"><p>Copyright &copy; MyungkyunBlog 2023</p></div>
+            </div>
+        </footer>
+    </body>
+</html>

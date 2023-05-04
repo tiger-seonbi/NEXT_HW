@@ -1,0 +1,28 @@
+{% extends 'Blog/base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'Blog/new.css' %}"/>
+{% endblock css %}
+{% block content %}
+
+{% comment %} {% if error %}
+    <p>{{error}}</p>
+{% endif %} {% endcomment %}
+<form action="" method="POST">
+    <h1>로그인을 해주시오.</h1>
+    {% csrf_token %}
+    {% if error %}
+    <p class="form_text">{{error}}</p>
+    {% endif %}
+        <div class="username_typing">
+            <div class="form_text">유저 네임.</div><input type="text" name="username" placeholder="유저네임을 적어주세요.">
+        </div>
+        <div class="password_typing">
+            <div class="form_text">비밀번호.</div><input type="text" name="password" placeholder="비밀번호를 적어주세요.">
+        </div>
+        <div class="submit_button">
+            <button type="submit" class="button">로그인</button>
+        </div> 
+</form>
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'accounts/base.html' %}
+
+{% block css %}
+
+{% endblock css %}
+{% block content %}
+<div class="signup_link">
+    <h1>블로그 회원관리</h1>
+    <a href="{% url "Blog:home" %}">블로그로가기</a>
+</div>
+{% comment %} <div class="detail_link">
+    <ul>
+        {% for post in posts %}
+        <li><a href="{% url 'Blog:detail' post.pk %}">{{post.title}}</a></li>
+        {% endfor %}
+    </ul> {% endcomment %}
+{% endblock content %}

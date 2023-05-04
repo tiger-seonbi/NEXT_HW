@@ -1,0 +1,22 @@
+{% extends 'Blog/base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'accounts/login.css' %}"/>
+{% endblock css %}
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="form_text">글의 제목.</div>
+    <div class="title_submit">
+        <input type="text" id="title" name="title" placeholder="제목을 입력해주세요">
+    </div>
+    <div class="form_text">글의 내용.</div>
+    <div class="content_submit">
+        <textarea name="content" id="content" cols="120" rows="25" placeholder="내용을 입력해주세요" ></textarea>
+    </div>
+    <div class="submit_button">
+        <button type="submit" class="button">작성하기</submit>
+    </div>
+</form>
+{% endblock content %}

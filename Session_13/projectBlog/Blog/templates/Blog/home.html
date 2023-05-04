@@ -1,0 +1,19 @@
+{% extends 'Blog/base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'Blog/home.css' %}"/>
+{% endblock css %}
+{% block content %}
+<div class="back_img"></div>
+<div class="new_link">
+    <a href="{% url 'Blog:new' %}">글 쓰러가기.</a>
+</div>
+<div class="detail_link">
+    <div class="post_list_word">글 목록.</div>
+    <ul class="post_list">
+        {% for post in posts %}
+        <li><a class="post_title" href="{% url 'Blog:detail' post.pk %}">{{post.title}}</a> <p>글의 작성자 : {{post.author}}</p></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

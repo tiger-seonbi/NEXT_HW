@@ -1,0 +1,19 @@
+{% extends 'Blog/base.html' %}
+
+{% block css %}
+
+{% endblock css %}
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="title_submit">
+        <input type="text" id="title" name="title" placeholder="{{post.title}}">
+    </div>
+    <div class="content_submit">
+        <textarea name="content" id="content" cols="30" rows="10" placeholder="{{post.content}}" ></textarea>
+    </div>
+    <div class="submit_button">
+        <button type="submit">작성하기</submit>
+    </div>
+</form>
+{% endblock content %}

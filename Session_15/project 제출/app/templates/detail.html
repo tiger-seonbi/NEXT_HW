@@ -1,0 +1,170 @@
+{% extends 'base.html' %} {% block content %}
+<div>
+  <div>
+    <div class="post_title">{{ post.title }}</div>
+    <div class="post_content">{{ post.content }}</div>
+  </div>
+  <a href="{% url 'home' %}">홈으로</a>
+
+  {% if user.is_authenticated and post.author.pk == user.pk %}
+  <a href="{% url 'edit' post.pk %}">수정하기</a>
+  <a href="{% url 'delete' post.pk %}">삭제하기</a>
+  <span class="like-count">좋아요 수 : {{ post.likes.count }}</span>
+  {% endif %} 
+<div class="comment-list">
+{% for comment in post.comments.all %}
+  <li>{{ comment.content }}
+{% if user.is_authenticated and comment.author.pk == user.pk %}
+  {% comment %} <button class="comment-delete" data-commnet-pk="{{ comment.pk }}">삭제</button> {% endcomment %}
+  {% comment %} <a href="{% url 'delete_comment' post.pk comment.pk %}">댓글삭제</a> {% endcomment %}
+  {% endif %} {% endfor %}
+  </li>
+</div>
+  {% if user.is_authenticated %}
+  {% comment %} <form method="POST">
+    {% csrf_token %}
+    <input type="text" name="content" placeholder="댓글을 입력하세요" />
+    <button type="submit">댓글 쓰기</button>
+  </form> {% endcomment %}
+  <div class="comment-box">
+    <input type="text" class="comment-textarea" placeholder="댓글을 입력하세요" />
+    <button class="comment-button">댓글 쓰기</button>
+  </div>
+  <button class="like-button">좋아요</button>
+  {% endif %}
+</div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  {% comment %} 좋아요 구현 {% endcomment %}
+  const likeButton = document.querySelector(".like-button");
+  const likeCount = document.querySelector(".like-count");
+
+  const handleLike = () => {
+    fetch("/like", {
+      method: "POST",
+      body: JSON.stringify({
+        post_pk: "{{ post.pk }}",
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        likeCount.innerHTML = `좋아요 ${data.like_count}개`;
+      });
+  };
+
+  likeButton.addEventListener("click", handleLike);
+
+  const commentTextarea = document.querySelector(".comment-textarea");
+  const commentButton = document.querySelector(".comment-button");
+  const commentList = document.querySelector(".comment-list");
+
+  //axios로 댓글 구현하기
+  {% comment %} const handleComment = async () => {
+    try{
+    const response = await axios.post('/comment', {comment: commentTextarea.value, post_pk: "{{post.pk}}"})
+    const {content, post_pk, comment_pk} = response.data
+    
+    const div = document.createElement('div')
+    div.id = comment_pk + '-box'
+    div.className = comment_pk = '-box'
+    
+    const li = document.createElement('li')
+    li.innerHTML = content
+    div.appendChild(li)
+
+    const a = document.createElement('a')
+    a.innerHTML = '삭제'
+    a.id = comment_pk
+    a.classList.add('comment-delete')
+    a.addEventListener('click', handleCommentDel)
+    div.appendChild(a)
+
+    commentList.appendChild(div)
+
+    commentTextarea.value = '' //다시 댓글창 원상 복구
+  }
+  catch (e) {
+    console.error(e)
+  }
+}
+
+  const handleCommentDelete = async (e) => {
+    const id = e.target.id
+    try{
+    const response = await axios.post('/comment/' + '{{post.pk}}/' + `${id}`)
+
+    const {comment_pk} = res.data
+    const commentBoxDeleted = e.target.parentNode
+    commentBoxDeleted.remove()
+  }
+  catch(err){
+    console.error(err);
+  }
+}
+
+  const commentDelete = document.querySelectorAll('.comment-delete')
+  for (let i = 0; i < commentDelete.length; i++) {
+    const a = commentDelete[i];
+    a.addEventListener('click', handleCommentDel)
+  }
+
+  commentButton.addEventListener('click', handleComment); {% endcomment %}
+
+  //댓글 구현(fetch)
+  const handleComment = () => {
+    fetch("/comment", {
+      method: "POST",
+      body: JSON.stringify({
+        comment: commentTextarea.value,
+        post_pk: "{{ post.pk }}",
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        const li = document.createElement('li');
+        li.innerHTML = `${data.content}`;
+        commentList.appendChild(li);
+        const btn = document.createElement('button');
+        btn.innerHTML = '삭제';
+        btn.id = 'comment_pk';
+        btn.classList.add('comment-delete');
+        btn.addEventListener('click', handleDelComment)
+        commentList.appendChild(btn);
+
+        commentTextarea.value = ''; // 댓글 입력창 초기화
+      });
+  };
+
+  const handleDelComment = (e) => {
+    const id = e.pk 
+    post = "{{post}}"
+    fetch(`comment-delete/${post. pk}/${id}`, {
+      method: "POST",
+      body: JSON.stringify({
+        id: id,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    console.log('여기까진됨.')
+      .then((response) => response.json())
+      .then((data) => {
+        const commentlistDeleted = e.parentNode
+        commentListDeleted.remove()
+      })
+  }
+
+  commentButton.addEventListener('click', handleComment);
+{% comment %} 댓글 삭제 여기서 문제 발생. 일단 삭제 기능이 안돌아감. 두번째로 댓글 구현시에 버튼이 바로 생성이 안되고 늦게 생성됨..삭제 버튼은 비동기라 그런건가? {% endcomment %}
+
+
+
+</script>
+{% endblock content %}

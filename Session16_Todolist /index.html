@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./index.css" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My ToDos</title>
+</head>
+<body>
+    <div class="usernameWrapper">
+        <h3>이름을 입력하세요</h3>
+        <input class="username"></input>
+        <button style="width: 10%" type="button" onclick="setUsername()">설정하기</button>
+    </div>
+    <div id="header"></div>
+    <div class="container">
+        <div id="luck">
+            <p></p>
+        </div>
+        <form id="todo-form">
+            <input type="text" name="content" id="content" placeholder="할일을 입력하세요" required/>
+        
+            <button class="submitBtn">추가하기</button>
+        </form>
+        <ul id="todo-list"></ul>
+    </div>
+    <script src="./js/localstorage.js"></script>
+    <script src="./js/todo.js"></script>
+    <script src="./js/luck.js"></script>
+</body>
+</html>

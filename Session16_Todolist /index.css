@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "Black And White Picture", sans-serif;
+    font-family: "Black Han Sans", sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&display=swap");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  * {
+    font-family: "Black Han Sans";
+  }
+  
+  #header {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  .usernameWrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .username {
+    width: 20%;
+    margin-left: 5%;
+  
+    font-size: 1rem;
+  
+    box-sizing: border-box;
+    padding-left: 20px;
+  }
+  
+  .container {
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 5px;
+  
+    padding-top: 15px;
+    padding-left: 3%;
+  
+    border: 5px solid black;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  li > button {
+    text-align: center;
+    padding-top: 1px;
+    height: 18px;
+    margin-left: 10px;
+    border: 0;
+    outline: 0;
+    appearance: none;
+  }
